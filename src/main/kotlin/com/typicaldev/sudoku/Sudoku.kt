@@ -66,6 +66,7 @@ class Sudoku private constructor(level: Level?) {
     private fun fillRemaining(i: Int, j: Int) : Boolean {
         var i = i
         var j = j
+
         if (j >= GRID_SIZE && i < GRID_SIZE - 1) {
             i += 1
             j = 0
@@ -91,7 +92,7 @@ class Sudoku private constructor(level: Level?) {
             }
         }
 
-        for (digit in 1..GRID_SIZE) {
+        for (digit in 1..MAX_DIGIT_VALUE) {
             if (isSafeToPutIn(i, j, digit)) {
                 grid[i][j] = digit
                 if (fillRemaining(i, j + 1)) {
