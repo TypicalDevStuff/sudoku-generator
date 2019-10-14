@@ -11,7 +11,6 @@ plugins {
     id("org.jetbrains.kotlin.jvm") version "1.3.41"
     id("org.jetbrains.dokka") version "0.9.18"
 
-    // Apply the java-library plugin for API and implementation separation.
     `java-library`
     `build-scan`
     `maven-publish`
@@ -53,8 +52,6 @@ publishing {
 }
 
 repositories {
-    // Use jcenter for resolving dependencies.
-    // You can declare any Maven/Ivy/file repository here.
     jcenter()
 }
 

@@ -24,9 +24,7 @@ class Sudoku private constructor(level: Level?) {
 
     private fun fillGrid() {
         fillDiagonalBoxes()
-        printGrid()
         fillRemaining(0, GRID_SIZE_SQUARE_ROOT)
-        printGrid()
         removeDigits()
     }
 
