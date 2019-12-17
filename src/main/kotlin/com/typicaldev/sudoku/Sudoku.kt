@@ -2,11 +2,9 @@ package com.typicaldev.sudoku
 
 import kotlin.random.Random
 
-class Sudoku private constructor(level: Level?) {
+class Sudoku private constructor(val level: Level) {
 
     val grid = Array(GRID_SIZE) { IntArray(GRID_SIZE) {0} }
-
-    val level: Level = level ?: Level.JUNIOR
 
     init {
         fillGrid()
@@ -147,7 +145,7 @@ class Sudoku private constructor(level: Level?) {
     }
 
     class Builder {
-        private lateinit var level: Level
+        private var level = Level.JUNIOR
 
         fun setLevel(level: Level) : Builder {
             this.level = level
@@ -155,7 +153,7 @@ class Sudoku private constructor(level: Level?) {
         }
 
         fun build() : Sudoku {
-            return Sudoku(this.level)
+            return Sudoku(level)
         }
     }
 }

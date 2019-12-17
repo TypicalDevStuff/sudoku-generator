@@ -17,7 +17,7 @@ plugins {
 }
 
 group = "org.typicaldev"
-version = "0.0.2"
+version = "0.0.3"
 
 tasks {
     withType<KotlinCompile> {
