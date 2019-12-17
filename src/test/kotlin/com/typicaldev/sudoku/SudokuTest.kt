@@ -4,7 +4,6 @@
 package com.typicaldev.sudoku
 
 import kotlin.test.Test
-import kotlin.test.assertTrue
 
 class SudokuTest {
     @Test fun testSomeLibraryMethod() {

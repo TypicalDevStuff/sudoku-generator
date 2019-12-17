@@ -6,7 +6,7 @@ class Sudoku private constructor(level: Level?) {
 
     val grid = Array(GRID_SIZE) { IntArray(GRID_SIZE) {0} }
 
-    private val level: Level = level ?: Level.JUNIOR
+    val level: Level = level ?: Level.JUNIOR
 
     init {
         fillGrid()
